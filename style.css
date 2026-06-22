@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    min-height:100vh;
+    overflow:hidden;
+    color:white;
+}
+
+.screen{
+    display:none;
+    width:100%;
+    min-height:100vh;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.screen.active{
+    display:flex;
+}
+
+.content{
+    max-width:600px;
+}
+
+.content h1{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:1.2rem;
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+.photo-card{
+    width:100%;
+    max-width:450px;
+}
+
+.photo-card img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+#message{
+    margin-top:20px;
+    font-size:1.2rem;
+    line-height:1.5;
+    padding:0 10px;
+}
+
+.buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+button{
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#startBtn,
+#nextBtn{
+    background:white;
+    color:#ff4f87;
+    font-weight:bold;
+}
+
+#prevBtn{
+    background:rgba(255,255,255,.2);
+    color:white;
+    border:1px solid white;
+}
+
+/* Corações */
+
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    font-size:20px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:600px){
+
+    .content h1{
+        font-size:2rem;
+    }
+
+    .photo-card img{
+        height:400px;
+    }
+
+    #message{
+        font-size:1.1rem;
+    }
+
+}
